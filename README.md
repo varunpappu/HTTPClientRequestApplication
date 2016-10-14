@@ -1,4 +1,4 @@
-# ProjectCauseCode #
+# HttpClientRequests #
 
 This README provides step by step installation and implementation of the Chrome Extension with the help of HTTP REST methods (GET, POST, PUT, DELETE)
 
