@@ -1,0 +1,17 @@
+{  
+   "name":"Http Client Request",
+   "description":"An extension that performs simple HTTP requests",
+   "version":"1.0.0.0",
+   "manifest_version":2,
+   "icons":{  
+      "128":"icon.png"
+   },
+   "app":{  
+      "urls":[  
+         "http://localhost:8080/index.html"
+      ],
+      "launch":{  
+         "web_url":"http://localhost:8080/index.html"
+      }
+   }
+}

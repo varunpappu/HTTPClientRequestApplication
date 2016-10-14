@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/httpfunctioncall.js"></script>
+
+<body>
+    <div id="page">
+        <div id="url">
+            <h1>URL:<input type="url" class="form-control" id="userURL" value="homepage" style="width: 600px;">
+            </h1>
+        </div>
+        <div id="nav">
+            <ul>
+                <li> <button type="button" class="btn btn-primary" onclick="getFunctionality()">GET</button></li>
+                <li> <button type="button" class="btn btn-primary" onclick="postFunctionality()">POST</button></li>
+                <li><button type="button" class="btn btn-primary" onclick="putFunctionality()">PUT</button></li>
+                <li><button type="button" class="btn btn-primary" onclick="deleteFunctionality()">DELETE</button></li>
+
+
+            </ul>
+        </div>
+
+        <div id="content">
+            <h1>Add Arguments</h1>
+            <textarea id="textarea" class="form-control" rows="5" cols="20">
+                key=value&
+                key=value&
+                key=value&
+            </textarea>
+        </div>
+
+        <div id="content">
+            <h1>Result</h1>
+            <p id="displayResult"></p>
+        </div>
+    </div>
+</body>
+
+</html>

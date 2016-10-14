@@ -1,0 +1,69 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body ng-cloak>
+    <div class="container" ng-controller="CustomersCtrl">
+        <form name="Codenx" novalidate>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Address</th>
+                        <th>City</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input class="form-control" ng-model="customer.firstName" required="" placeholder="First Name">
+                        </td>
+                        <td>
+                            <input class="form-control" ng-model="customer.lastName" placeholder="Last Name">
+                        </td>
+                        <td>
+                            <input class="form-control" ng-model="customer.address" placeholder="Address">
+                        </td>
+                        <td>
+                            <input class="form-control" ng-model="customer.city" placeholder="City">
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" ng-click="add(customer)" ng-if="!customer._id" type="submit" ng-disabled="!Codenx.$valid">Create (POST)</button>
+                            <div class="btn-group">
+                                <button class="btn btn-info" ng-click="update(customer)" ng-if="customer._id" type="submit">update</button>
+                                <button class="btn" ng-click="deselect()" ng-if="customer._id">Clear</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr ng-repeat="customer in customers">
+                        <td>{{customer.firstName}}</td>
+                        <td>{{customer.lastName}}</td>
+                        <td>{{customer.address}}</td>
+                        <td>{{customer.city}}</td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-danger" ng-click="remove(customer)">DELETE (remove)</button>
+                                <button class="btn btn-warning" ng-click="edit(customer._id)">PUT (update)</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="js/ngProgress.min.js"></script>
+    <script src="js/toaster.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/customers.js"></script>
+</body>
+
+</html>
